@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
 
-
+// Если ты чето изменять будешь я увижу пон???
 public class Main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Launcher nedelnoi davnosti");
@@ -39,7 +39,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String inputText = textField.getText();
-                if (inputText.equals("lazzyz") || inputText.equals("excellent")) {
+                if (inputText.equals("lazzyz") || inputText.equals("hesli")) {
                     JFrame Frame2 = new JFrame("Launcher - Vzlom jopi");
                     Frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     Frame2.setSize(720, 450);
@@ -65,7 +65,7 @@ public class Main {
                     downloadButton.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             try {
-                                Desktop.getDesktop().browse(new URI("https://vk.com/")); // Замените ссылку на нужную вам
+                                Desktop.getDesktop().browse(new URI("https://vk.com/cheatspack")); // Замените ссылку на нужную вам
                             } catch (Exception ex) {
                                 ex.printStackTrace();
                             }
