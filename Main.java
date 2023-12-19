@@ -65,7 +65,7 @@ public class Main {
                     downloadButton.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
                             try {
-                                Desktop.getDesktop().browse(new URI("https://www.example.com/download")); // Замените ссылку на нужную вам
+                                Desktop.getDesktop().browse(new URI("https://vk.com/")); // Замените ссылку на нужную вам
                             } catch (Exception ex) {
                                 ex.printStackTrace();
                             }
