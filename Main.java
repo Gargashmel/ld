@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 
 
 public class Main {
@@ -15,6 +16,8 @@ public class Main {
                 super.paintComponent(g);
                 Image image = new ImageIcon("C:\\Users\\User\\Desktop\\CheatPack\\DKcUpJgAtIc.jpg").getImage();
                 g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+                g.setColor(Color.WHITE);
+                g.drawString("Version 10.2", 10, getHeight() - 10);
             }
         };
 
@@ -22,6 +25,8 @@ public class Main {
 
         JTextField textField = new JTextField(20);
         textField.setBounds(250, 250, 200, 30);
+
+
 
         JButton button = new JButton("Enter");
         button.setForeground(Color.WHITE);
@@ -38,6 +43,37 @@ public class Main {
                     JFrame Frame2 = new JFrame("Launcher - Vzlom jopi");
                     Frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     Frame2.setSize(720, 450);
+//нопка читы 1 16 5
+                    JButton button = new JButton("Cheats 1.16.5");
+                    button.setForeground(Color.WHITE);
+                    button.setOpaque(false);
+                    button.setContentAreaFilled(false);
+                    button.setBorderPainted(false);
+                    button.setBounds(-20, 200, 150, 50);
+//кнопка для скачки
+                    JButton downloadButton = new JButton("Download");
+                    downloadButton.setForeground(Color.WHITE);
+                    downloadButton.setOpaque(false);
+                    downloadButton.setContentAreaFilled(false);
+                    downloadButton.setBorderPainted(false);
+                    downloadButton.setBounds(100, 200, 150, 50);
+                    downloadButton.setVisible(false); // Начально кнопка "Download" скрыта
+
+                    button.addActionListener(e1 -> {
+                        downloadButton.setVisible(true); // Показываем кнопку "Download" при нажатии
+                    });
+                    downloadButton.addActionListener(new ActionListener() {
+                        public void actionPerformed(ActionEvent e) {
+                            try {
+                                Desktop.getDesktop().browse(new URI("https://www.example.com/download")); // Замените ссылку на нужную вам
+                            } catch (Exception ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                    });
+
+                    Frame2.add(downloadButton);
+                    Frame2.add(button);
                     Frame2.add(new JPanel() {
                         @Override
                         protected void paintComponent(Graphics g) {
@@ -53,8 +89,7 @@ public class Main {
                             g.drawString("[ + ] Добавлен хуй под твоей мамашей", 10, 60);
                             g.drawString("[ + ] Добавлен хуй под твоей мамашей", 10, 70);
 
-
-
+                            Frame2.setVisible(true);
                         }
                     });
 
@@ -74,5 +109,6 @@ public class Main {
         frame.add(panel);
         frame.pack();
         frame.setVisible(true);
+
     }
 }
