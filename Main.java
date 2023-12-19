@@ -59,10 +59,8 @@ public class Main {
                     downloadButton.setBounds(100, 200, 150, 50);
                     downloadButton.setVisible(false); // Начально кнопка "Download" скрыта
 
-                    button.addActionListener(new ActionListener() {
-                        public void actionPerformed(ActionEvent e) {
-                            downloadButton.setVisible(true); // Показываем кнопку "Download" при нажатии
-                        }
+                    button.addActionListener(e1 -> {
+                        downloadButton.setVisible(true); // Показываем кнопку "Download" при нажатии
                     });
                     downloadButton.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
