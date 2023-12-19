@@ -57,7 +57,7 @@ public class Main {
                     newFrame.setVisible(true);
                     frame.dispose(); // Закрываем текущее окно
                 } else {
-                    JOptionPane.showMessageDialog(frame, "net ne plavelno lox ");
+                    JOptionPane.showMessageDialog(frame, "net ne plavelno");
                 }
             }
         });
